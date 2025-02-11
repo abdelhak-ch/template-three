@@ -193,7 +193,7 @@ button {
     .firstView h1 span::after {display: none}
     .firstView h1{font-size: 45px}
     .firstView .images {flex-direction: column;}
-    .firstView .images img.line {display: flex;order: 2;width: 350px;}
+    .firstView .images img.line {display: flex;order: 2;width: 350px;display:  none;}
     .firstView .images img.man {
         display: flex;
         order: 3;
