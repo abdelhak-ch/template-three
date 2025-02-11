@@ -1,0 +1,435 @@
+:root {
+    --green-one: rgb(26 208 124);
+    --p-color: #00052f92;
+}
+* {
+    font-family: "Roboto", serif;
+    user-select: none;
+}
+/* start navbar */
+div.logo, ul,nav div.countainer {
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", serif;
+}
+
+div.countainer {
+    padding: 0 100px;
+}
+nav div.countainer {
+    justify-content: space-between;
+    color: white;
+    position: relative;
+    width: 100%;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    background-color: #0d0a1d;
+    z-index: 4;
+}
+
+div.logo img {
+    height: 50px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 0 15px;
+}
+ul li a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+ul li a::after {
+    content: "";
+    background-color: white;
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -1px;
+    right: 0;
+    transition: 0.15s ease-in-out;
+}
+ul li a:hover::after {width: 100%}
+nav i {font-size: 32px}
+
+button {
+    padding: 15px 20px;
+    font-size: 15px;
+    background-color: rgb(26 208 124);
+    border: none;
+    border-radius: 10px;
+    font-weight: 750;
+    cursor: pointer;
+}
+/* from 0 to 999 px */
+@media (max-width: 999px) {
+    ul {
+        display: none;
+    }
+    nav button {
+        display: none;
+    }
+    div.countainer {
+        padding: 0 12px;
+    }
+
+}
+/* from 1000px to infinity */
+@media (min-width: 1000px) {
+    ul {
+        display: flex;
+    }
+
+    button {
+        display: block;
+    }
+
+    div.countainer {
+        padding: 0 50px;
+    }
+    nav i::before {
+        display: none;
+    }
+
+}
+/* end navbar */
+
+.firstView {
+    margin-top: 66px;
+    padding-top: 80px;
+    background-color: #0c081c;
+    color: white;
+    border-bottom-left-radius: 100px;
+}
+.firstView h1 {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 90px;
+    font-weight: 300;
+}
+.firstView h1 span {
+    font-weight: 800;
+    position: relative;
+}
+.firstView h1 img {
+    width: 145px;
+}
+.firstView h1 span::after {
+    content: "";
+    position: absolute;
+    top: -11px;
+    right: -158px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff81;
+}
+.firstView .images {
+    display: flex;
+    justify-content: space-around;
+}
+.firstView .images .items > div > p {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 400px;
+    flex-grow: 1;
+    color: #c0c0c0;
+}
+.firstView .images img.line {
+    /* flex-grow: 0.5; */
+    width: 380px;
+    margin-top: 45px;
+}
+.firstView .images img.man {
+    width: 400px;
+}
+.button {
+    margin-top: 50px;
+    display: flex;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border-radius: 15px;
+    width: 165px;
+    box-shadow: inset 0px 0px 1px 2px rgb(26 208 124);
+}
+.button i {
+    position: relative;
+    top: 15px;
+    left: 10px;
+}
+.firstView .items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.firstView .items .best {
+    display: flex;
+    font-style: italic;
+}
+.firstView .best img {
+    height: 60px;
+    position: relative;
+    top: 20px;
+    left: 0;
+}
+/* from 0 to 999 px */
+@media (max-width: 999px) {
+    .firstView {padding-top: 40px;}
+    .firstView .items .best ,
+    .firstView h1 img ,
+    .firstView h1 span::after {display: none}
+    .firstView h1{font-size: 45px}
+    .firstView .images {flex-direction: column;}
+    .firstView .images .line {display: flex;order: 2}
+    .firstView .images img.man {
+        display: flex;
+        order: 3;
+        padding-top: 50px;
+        border-bottom-left-radius: 70px;
+        width: 350px;
+    }
+}
+/* end home page "first view" */
+.financial{
+    background-color: rgb(242 243 247);
+    padding: 100px 0;
+}
+.financial .countainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.financial .countainer h2 {
+    margin: 0;
+    font-size: 60px;
+}
+.financial .countainer h2 i {
+    width: 80px;
+    height: 50px;
+    transform: rotate(-45deg);
+}
+.financial .countainer h2 i::before {
+    position: relative;
+    right: -17px;
+    top: -21px;
+    font-size: 28px;
+    z-index: 1;
+}
+.financial .countainer h2 i::after {
+    content: "";
+    position: absolute;
+    position: absolute;
+    top: -2px;
+    left: -7px;
+    width: 75px;
+    height: 48px;
+    background-color: var(--green-one);
+    transform: rotate(45deg);
+    border-radius: 30px;
+}
+.financial .countainer h2 span {
+    color: var(--green-one);
+    text-decoration: underline;
+}
+.financial .countainer > p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--p-color);
+    
+    padding-top: 30px;
+    padding-bottom: 60px;
+    margin: 0;
+}
+.financial .countainer .cards {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0 0 40px 0;
+}
+.financial .countainer .cards .card {
+    background-color: rgb(247 249 252);
+    border: 2px solid white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 64px;
+    border-radius: 20px;
+}
+.financial .countainer .cards .card:first-child {
+    background-color: white;
+    position: relative;
+    border: 2px solid var(--green-one);
+
+}
+.financial .countainer .cards .card:first-child::before {
+    content: "";
+    background-color: white;
+    position: absolute;
+    right: calc(50% - 15px);
+    bottom: -22px;
+    width: 50px;
+    height: 40px;
+    border-bottom-right-radius: 70% 88%;
+    transform: rotate(39deg);
+    border: 2px solid var(--green-one);
+    border-top: none;
+    border-left: none;
+}
+.financial .busiessLine {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.financial .busiessLine img {
+    height: 580px;
+
+}
+.financial .busiessLine > div {
+    background: white;
+    border-radius: 60px;
+    padding: 10px 10px 10px 50px;
+    margin-right: 20px;
+}
+.financial .busiessLine > div h3 {
+    font-size: 40px;
+    margin: 40px auto 10px 0;
+}
+.financial .busiessLine > div p {
+    font-size: 20px;
+    line-height: 35px;
+    color: var(--p-color)
+}
+
+.financial .busiessLine > div h4 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.financial .busiessLine > div > p:nth-child(4) > i {
+    margin-right: 4px;
+    margin-left: 0;
+}
+
+.financial .busiessLine > div p i {
+    color: var(--green-one);
+    margin-right: 10px;
+    font-size: 25px;
+    margin-left: 5px;
+}
+.financial .busiessLine > div p i::before {
+    position: relative;
+    top: 2px;
+}
+
+.financial .button {
+    width: 180px;
+    height: 60px;
+    padding: 6px;
+    margin-top: 10px;
+}
+.financial .button i {
+    top: 23px;
+    left: 20px;
+}
+@media (max-width: 999px) {
+    .financial {
+        padding: 50px 0;
+    }
+    .financial .countainer h2 {
+        font-size: 30px;
+        line-height: 1;
+    }
+    .financial .countainer h2 i::before {
+        top: -1px;
+        left: 33px;
+        font-size: 25px;
+    }
+    .financial .countainer h2 i::after {
+        top: -5px;
+        left: 17px;
+        height: 37px;
+        width: 55px;
+    }
+    .financial .countainer p {
+        text-align: left;
+    }
+    .financial .countainer p > span {
+        padding: 0 40px;
+    }
+    .financial .cards {
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+    .financial .countainer div.cards div.card {
+        padding: 25px 10px; 
+        margin-right: 10px;
+    }
+    .financial .cards .card  p {
+        width: 220px;
+        margin: 0;
+        text-align: center;
+    }
+    .financial .busiessLine {
+        flex-direction: column;
+    }
+    .financial .busiessLine > div {
+        order: 2;
+        margin: 20px 0 0 0;
+        border-radius: 30px;
+        padding: 10px 12px 10px 12px;
+    }
+    .financial .busiessLine > div h3 {
+        font-size: 34px;
+        margin-top: 20px;
+        /* text-align: center; */
+    }
+    .financial .busiessLine > div > h3 + p {
+        font-size: 22px;
+        /* margin-top: 0; */
+        margin-left: 5px;
+    }
+    .financial .busiessLine > div > p:nth-child(5) {
+        margin-top: 10px;
+    }
+    .financial .busiessLine > div > p:nth-child(4) {
+        margin-bottom: 0;
+    }
+    .financial .busiessLine > div > p:nth-child(4) > i {
+        transform: rotate(45deg);
+    }
+    .financial .busiessLine > div > p:nth-child(4) > i::before {
+        top: 20px;
+        right: -11px;
+    }
+    .financial .busiessLine img {
+        order: 1;
+        height: auto;
+    }
+    .financial .busiessLine .button {
+        width: 90%;
+        position: relative;
+        left: 3%;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    .financial .busiessLine .button button {
+        width: 90%;
+    }
+    .financial .button i {
+        left: 10px;
+    }
+}
+/* financial end */
+
